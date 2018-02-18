@@ -1,0 +1,40 @@
+{
+  "name": "SerialMQTTGatewayJS",
+  "version": "1.0.0",
+  "keywords": [
+    "serial",
+    "usb",
+    "port",
+    "mqtt",
+    "broker",
+    "bidirectional",
+    "dual",
+    "gateway",
+    "topic",
+    "mosquitto",
+    "iot",
+    "arduino",
+    "nodejs"
+  ],
+  "description": "NodeJS serial to MQTT, MQTT to serial bidirectional gateway",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Fabvalaaah",
+  "email": "fabvalaaah@laposte.net",
+  "contributors": [
+    "Fabvalaaah"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabvalaaah/SerialMQTTGatewayJS.git"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mqtt": "^2.15.3",
+    "readline": "^1.3.0",
+    "serialport": "^6.0.5"
+  }
+}
