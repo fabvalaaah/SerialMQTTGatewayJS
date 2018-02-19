@@ -1,13 +1,13 @@
 #Example: LED control & Status
 
 
-# Requirements
+#Requirements
 
 Atom
 PlatformIO
 ArduinoJSON
 
-# Usage
+#Usage
 
 
 Download the firmware onto the Arduino
