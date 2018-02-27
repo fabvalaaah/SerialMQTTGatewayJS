@@ -62,12 +62,12 @@ const mqttClient = MQTT.connect(setup.mqtt);
  * COM3 ---> Windows
  */
 const serial = new SerialPort(setup.port, {baudRate: setup.rate});
-const valueReader = ReadLineItf({
+const serialReader = ReadLineItf({
     input: serial
 });
 
 // Serial listener (serial --> MQTT)
-valueReader.on('line', function (value) {
+serialReader.on('line', function (value) {
     /*
      * I don't understand exactly why, but sometimes the value still contains
      * unwanted chars like \0 \r \n. As I don't have time to spend on it, I
