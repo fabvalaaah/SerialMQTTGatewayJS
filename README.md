@@ -13,10 +13,10 @@ mainly depends on the NPM module "serialport" (v6.0.5) to handle the serial
 communication and on the NPM module "mqtt" (v2.15.3) to communicate over an MQTT
 broker.
 
-In the "test" directory, I added a small Arduino program I used for testing the
-whole communication pipe. Use `mosquitto_pub` and `mosquitto_sub` from the
-"moquitto-clients" APT package to publish or subscribe easily on a MQTT
-instance.
+In the "test" directory, I added a small Atom IDE project for Arduino which is a
+program I used for testing the whole communication pipe. Use `mosquitto_pub` and
+`mosquitto_sub` from the "moquitto-clients" APT package to publish or subscribe
+easily on a MQTT instance.
 
 ## Installation
 Run `sudo apt-get install build-essential` to install the needed dependency in
