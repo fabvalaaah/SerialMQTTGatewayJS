@@ -48,11 +48,10 @@
 'use strict';
 
 const SerialPort = require('serialport');
-const FS = require('fs');
 const MQTT = require('mqtt');
 const ReadLineItf = require('readline').createInterface;
 
-const setup = JSON.parse(FS.readFileSync('setup.json', 'utf8'));
+const setup = require('./setup');
 const mqttClient = MQTT.connect(setup.mqtt);
 /*
  * Common port list:
@@ -68,17 +67,8 @@ const serialReader = ReadLineItf({
 
 // Serial listener (serial --> MQTT)
 serialReader.on('line', function (value) {
-    /*
-     * I don't understand exactly why, but sometimes the value still contains
-     * unwanted chars like \0 \r \n. As I don't have time to spend on it, I
-     * dirty fix this for the moment with a regexp and even a trim. It then
-     * works flawlessly.
-     */
-    value = value.replace(/[\r\n\0]/gm, '');
-    if ('' !== value.trim()) {
-        console.log('out --> [' + value + ']');
-        mqttClient.publish(setup.tout, value, {qos: setup.qos}); // MQTT pub
-    }
+    console.log('out --> [' + value + ']');
+    mqttClient.publish(setup.tout, value, {qos: setup.qos}); // MQTT pub
 });
 // -------
 
