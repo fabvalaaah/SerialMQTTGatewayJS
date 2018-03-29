@@ -1,7 +1,7 @@
 # SerialMQTTGatewayJS
 NodeJS serial to MQTT, MQTT to serial bidirectional gateway.
 
-This is a NodeJS NetBeans project, tested with NodeJS v8.9.4 and Mosquitto (an
+This is a NodeJS NetBeans project, tested with NodeJS v8.10.0 and Mosquitto (a
 MQTT protocol implementation from the Eclipse Foundation) on Ubuntu Linux
 16.04.3 LTS x64.
 
