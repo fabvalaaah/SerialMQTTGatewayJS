@@ -32,7 +32,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "mqtt": "^2.15.3",
-    "serialport": "^6.0.5"
+    "mqtt": "^2.18.8",
+    "serialport": "^7.1.3"
   }
 }
