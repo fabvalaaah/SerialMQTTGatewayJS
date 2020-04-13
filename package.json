@@ -1,6 +1,6 @@
 {
   "name": "SerialMQTTGatewayJS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "serial",
     "usb",
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "mqtt": "^3.0.0",
-    "serialport": "^7.1.5"
+    "serialport": "8.0.7"
   }
 }
